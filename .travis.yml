@@ -9,19 +9,16 @@ notifications:
 matrix:
   matrix:
   include:
-    - os: osx
-      osx_image: xcode10.1
-      compiler: clang
     - os: linux 
       arch: amd64
       dist: bionic
       sudo: required
       env: TARGET_SYSTEM=linux-x64 BUILD_FOLDER=LinuxMakefile 
     - os: linux
-      arch: amd64
+      arch: arm64
       dist: bionic
       sudo: required
-      env: TARGET_SYSTEM=linux-armhf BUILD_FOLDER=Raspberry
+      env: TARGET_SYSTEM=linux-arm64 BUILD_FOLDER=LinuxMakefile
 
 before_install:
 - |
